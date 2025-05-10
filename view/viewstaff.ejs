@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Staff</title>
+    <link rel="stylesheet" href="style1.css"> <!-- Assuming you have a CSS file -->
+</head>
+<body>
+    <h1>Staff Members</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Contact Number</th>
+                <th>Position</th>
+                <th>Gender</th>
+                <th>Date of Joining</th>
+                <th>NIC</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% staff.forEach(function(staffMember) { %>
+                <tr>
+                    <td><%= staffMember.first_name %></td>
+                    <td><%= staffMember.last_name %></td>
+                    <td><%= staffMember.contact_number %></td>
+                    <td><%= staffMember.position %></td>
+                    <td><%= staffMember.gender %></td>
+                    <td><%= staffMember.joined_date %></td>
+                    <td><%= staffMember.nic %></td>
+                    <td><%= staffMember.email %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    
+    <br>
+    <a href="/">Back to Dashboard</a>
+</body>
+</html>

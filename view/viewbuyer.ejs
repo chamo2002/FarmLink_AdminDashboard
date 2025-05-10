@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Buyers</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- Assuming you have a CSS file -->
+</head>
+<body>
+    <h1>Buyers</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Buyer Name</th>
+                <th>Email</th>
+                <th>Contact Number</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% buyers.forEach(function(buyer) { %>
+                <tr>
+                    <td><%= buyer.name %></td>
+                    <td><%= buyer.email %></td>
+                    <td><%= buyer.contact_number %></td>
+                    <td><%= buyer.address %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    
+    <br>
+    <a href="/">Back to Dashboard</a>
+</body>
+</html>

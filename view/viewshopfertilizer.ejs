@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Fertilizer</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- Assuming you have a CSS file -->
+</head>
+<body>
+    <h1>Fertilizers Available</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Fertilizer Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Stock Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% fertilizers.forEach(function(fertilizer) { %>
+                <tr>
+                    <td><%= fertilizer.name %></td>
+                    <td><%= fertilizer.price %></td>
+                    <td><%= fertilizer.description %></td>
+                    <td><%= fertilizer.stock_quantity %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    
+    <br>
+    <a href="/">Back to Dashboard</a>
+</body>
+</html>
